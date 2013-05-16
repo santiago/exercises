@@ -1,0 +1,41 @@
+!!! 5
+html
+  head
+    link(rel= 'stylesheet', href= 'assets/bootstrap.min.css', type= 'text/css')
+    link(rel= 'stylesheet', href= 'assets/styles.css', type= 'text/css')
+
+    title Calculator
+  body
+    #calculator
+      .result
+        input(type="text", readonly="readonly", value="0")
+      .digits
+        each n in [1,2,3,4,5,6,7,8,9]
+          li(class="#{(n-1)%3==0 ? 'last' : ''}")
+            a.btn-large.btn(href='#') #{n}
+        li.last
+          a.btn-large.btn(href='#') 0
+        li
+          a.btn-large.btn(href='#') #{true ? '.' : '.'}
+      .clear
+        li
+          a.btn-large.btn.btn-warning(href='#') C
+      .total
+        li
+          a.btn-large.btn.btn-success(href='#') #{true ? '=' : '='}
+      .operations
+        .basic
+          li#add
+            a.btn.btn-large.btn-primary(href='#') +
+          li#sub
+            a.btn.btn-large.btn-primary(href='#') -
+          li#mul
+            a.btn.btn-large.btn-primary(href='#') *
+          li#div
+            a.btn.btn-large.btn-primary(href='#') /
+
+    script(type="text/javascript", src="Calculator.js")
+    script(type="text/javascript", src="assets/jquery.min.js")
+    script(type="text/javascript", src="assets/underscore.min.js")
+    script(type="text/javascript", src="assets/backbone.js")
+    script(type="text/javascript", src="app.js")

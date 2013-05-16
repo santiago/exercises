@@ -1,0 +1,42 @@
+body {
+  padding: 20px;
+}
+
+#calculator {
+	padding: 20px;
+	border: 1px solid #ddd;
+	float: left;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+
+li {
+	float: left;
+	display: block;
+	padding: 3px;
+}
+
+li.last {
+	clear: left;
+}
+
+input[readonly] {
+	background: white;
+	font-size: 30px;
+	height: 35px;
+	text-align: right;
+}
+
+.operations {
+	clear: left;
+}
+
+.total a.btn.btn-success {
+	height: 120px;
+	float: right;
+	margin-top: -100px;
+	line-height: 120px;
+	text-indent: -4px;
+	width: 2px;
+}
